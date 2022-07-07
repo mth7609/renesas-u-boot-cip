@@ -70,8 +70,8 @@ static void ping_timeout_handler(void)
 
 void ping_start(void)
 {
-	printf("Using %s device\n", eth_get_name());
-	net_set_timeout_handler(3000UL, ping_timeout_handler);
+	printf("Using %s device for 2s\n", eth_get_name());
+	net_set_timeout_handler(2000UL, ping_timeout_handler);
 
 	ping_send();
 }
